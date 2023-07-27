@@ -1,0 +1,21 @@
+version: 2.1
+
+setup: true
+
+executors:
+  base:
+    docker:
+      - image: cimg/base:current
+
+jobs:
+  test:
+    executor: base
+    steps:
+      - run:
+          name: Run command
+          command: echo 'hello world'
+
+workflows:
+  main:
+    jobs:
+      - test
