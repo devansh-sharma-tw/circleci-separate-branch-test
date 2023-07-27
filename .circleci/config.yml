@@ -9,9 +9,10 @@ jobs:
   test:
     executor: base
     steps:
+      - checkout
       - run:
           name: Run command
-          command: echo 'hello world'
+          command: git branch -a
 
 workflows:
   main:
